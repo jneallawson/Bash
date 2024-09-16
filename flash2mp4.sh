@@ -8,12 +8,14 @@
 # For every .flv file in this directy...
 for fname in `ls -f *.flv`;
 do
-	# get the file name minus the extension.
-	name="${fname%.*}"
+   # get the file name minus the extension.
+   name="${fname%.*}"
 
-	# if the .mp4 doesn't exist, create an .mp4 from the .flv file.
-	if ! test -f "$name.mp4"; then
-#		echo $name
-		ffmpeg -y -i $name.flv -c:v libx264 -crf 19 -strict experimental $name.mp4
-	fi
+   # if the .mp4 doesn't exist, create an .mp4 from the .flv file.
+   if ! test -f "$name.mp4"; then
+      echo "Creating ${name}.mp4 ..."
+      ffmpeg -y -loglevel warning -stats -i $name.flv -c:v libx264 -crf 19 -strict experimental $name.mp4
+      echo ""
+   fi
 done
+
