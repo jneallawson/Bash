@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
 # Crawl and download the website specified on the command-line. Wraps wget.
-# - Neal Lawson
-# Example: $0 http://example.com
+# captainneal@gmail.com, github.com/jneallawson
 #
+# Example: $0 http://example.com
 # Resource: https://simpleit.rocks/linux/how-to-download-a-website-with-wget-the-right-way/
 
 if [ $# -ne 1 ]; then

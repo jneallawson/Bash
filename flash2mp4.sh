@@ -3,7 +3,7 @@
 # flash2mp4.sh - For every .flv file in the current directory,
 # 	create a corresponding .mp4 file.
 # Requires: ffmpeg with libx264 codec support.
-#	- Neal Lawson
+# captainneal@gmail.com, github.com/jneallawson
 
 # For every .flv file in this directy...
 for fname in `ls -f *.flv`;
